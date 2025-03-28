@@ -1,0 +1,6 @@
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    float: right;
+    gap: 100px;
+}

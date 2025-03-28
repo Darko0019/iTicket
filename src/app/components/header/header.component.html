@@ -1,0 +1,49 @@
+<div class="header-container">
+    
+    <div class="notification-profile">
+      <button class="notification-icon" *ngIf="!isNotificationOverlayOpen" (click)="toggleNotificationOverlay()">
+        <i class="fa-regular fa-bell"></i>
+        <span class="notification-badge" *ngIf="unreadNotificationsCount > 0">{{ unreadNotificationsCount >= 99 ? '+99' : unreadNotificationsCount }}</span>
+      </button>
+      
+      <button class="notification-icon" *ngIf="isNotificationOverlayOpen" (click)="toggleNotificationOverlay()">
+          <i class="fa-solid fa-bell"></i>
+          <span class="notification-badge" *ngIf="unreadNotificationsCount > 0">{{ unreadNotificationsCount >= 99 ? '+99' : unreadNotificationsCount }}</span>
+      </button>
+    
+      <button class="profile-picture" (click)="toggleProfileOverlay()">
+          <img src="./Images/User Profile default.png" alt="Profile Picture">
+      </button>
+
+
+      <div class="notification-overlay" *ngIf="isNotificationOverlayOpen">
+        <div class="notifications-title">Notifications</div>
+        <div 
+          *ngFor="let notification of notifications" 
+          class="notification"
+          [ngStyle]="{
+          'background-color': notification.read == false ? 'var(--buttons-bg)' : 'auto'
+          }" 
+        >
+
+          <div class="notification-data">
+            <span class="notification-message">{{ notification.message }}</span> 
+            <span class="notification-date">{{ notification.receivedDate | date : "yyyy-MM-dd HH:mm" }}</span>
+          </div>
+          <i *ngIf="notification.read === false" class="fa-solid fa-circle unread-icon"></i>
+
+        </div>
+
+        <div class="no-notification" *ngIf="notifications.length == 0">Aucune notification reçue</div>
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="profile-overlay" [ngStyle]="{width: isProfileOverlayOpen == true ? '30%' : '0'}">
+    <button class="close-profile-menu" (click)="toggleProfileOverlay()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <img class="user-profile-picture" src="./Images/User Profile default.png" alt="Profile Picture">
+    <button class="logout-btn" (click)="logout()">Se déconnecter</button>
+  </div>

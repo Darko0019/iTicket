@@ -1,0 +1,57 @@
+<form (ngSubmit)="onSubmit()" class="signup-form">
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Nom</mat-label>
+    <input matInput [(ngModel)]="lastName" name="lastName" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Prenom</mat-label>
+    <input matInput [(ngModel)]="firstName" name="firstName" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" [(ngModel)]="email" name="email" required />
+    <mat-error>Entrez un email valide</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Numéro de téléphone</mat-label>
+    <input matInput type="tel" [(ngModel)]="phoneNumber" name="phoneNumber" required />
+    <mat-error>Entrez un numéro de téléphone valide (e.g., +212612345678 ou 0612345678)</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Mot de passe</mat-label>
+    <input matInput type="password" [(ngModel)]="password" name="password" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Confirmez le mot de passe</mat-label>
+    <input matInput type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Role</mat-label>
+    <mat-select [(ngModel)]="role" name="role" required>
+      <mat-option value="client">Client</mat-option>
+      <mat-option value="technicien">Technicien</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width" *ngIf="role === 'technicien'">
+    <mat-label>Domain</mat-label>
+    <mat-select [(ngModel)]="selectedDomain" name="domain" required>
+      <mat-option *ngFor="let domain of domains" [value]="domain">{{ domain }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="form-actions">
+    <button mat-raised-button color="primary" type="submit">S'inscrire</button>
+  </div>
+
+  <mat-card-actions class="login-link">
+    <span>Vous avez déja un compte ?</span>
+    <button mat-button color="accent" (click)="goToLogin()">Se connecter</button>
+  </mat-card-actions>
+</form>

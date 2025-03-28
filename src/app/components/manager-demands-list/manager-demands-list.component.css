@@ -1,0 +1,14 @@
+.manager-demands-list {
+    padding: 30px 60px;
+}
+
+.manager-demands-list h2 {
+    margin-left: 40px;
+}
+
+.demands-list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

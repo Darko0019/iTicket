@@ -1,0 +1,22 @@
+.demands-list-container {
+    width: 100%;
+}
+
+.list-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.list-wrapper .demands-list {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.demands-list-content {
+    padding: 30px;
+}

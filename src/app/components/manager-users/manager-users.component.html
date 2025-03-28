@@ -1,0 +1,65 @@
+<div class="manager-users">
+  <span class="manager-users-title">Gestion des utilisateurs</span>
+
+  <div class="table-container">
+    <div class="table-title">
+      <i class="fa-solid fa-user"></i>
+      <span class="role-title">Clients</span>
+    </div>
+    <div class="table-wrapper">
+      <table class="users-table">
+        <thead>
+          <tr>
+            <th>Nom complet</th>
+            <th>Dernier login</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let client of clients">
+            <td class="user-full-name">{{ client.nom_user }} {{ client.prenom_user }}</td>
+            <td class="user-last-login">{{ client.lastLogin | date : "yyyy-MM-dd" }} à {{ client.lastLogin | date : "HH:mm" }}</td>
+            <td class="user-email">{{ client.email_user }}</td>
+            <td class="user-actions">
+              <button class="actions-btn">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <div class="table-title">
+      <i class="fa-solid fa-user-gear"></i>
+      <span class="role-title">Techniciens</span>
+    </div>
+    <div class="table-wrapper">    
+      <table class="users-table">
+        <thead>
+          <tr>
+            <th>Nom complet</th>
+            <th>Dernier login</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let technician of technicians">
+            <td class="user-full-name">{{ technician.nom_user }} {{ technician.prenom_user }}</td>
+            <td class="user-last-login">{{ technician.lastLogin | date : "yyyy-MM-dd HH:mm" }}</td>
+            <td class="user-email">{{ technician.email_user }}</td>
+            <td class="user-actions">
+              <button class="actions-btn">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

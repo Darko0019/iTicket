@@ -1,0 +1,45 @@
+{
+    "links": {
+      "client": [
+        {
+          "title": "Accueil",
+          "icon": "fa-solid fa-house",
+          "routerLink": "/accueil-client"
+        },
+        {
+          "title": "Mes Demandes",
+          "icon": "fa-solid fa-bars-staggered",
+          "routerLink": "/client-demands-list"
+        },
+        {
+          "title": "Nouvelle Demande",
+          "icon": "fa-solid fa-square-plus",
+          "routerLink": "/add-demand"
+        }
+      ],
+      "technicien": [
+        {
+          "title": "Accueil",
+          "icon": "fa-solid fa-house",
+          "routerLink": "/accueil-technician"
+        }
+      ],
+      "gestionnaire": [
+        {
+          "title": "Accueil",
+          "icon": "fa-solid fa-house",
+          "routerLink": "/accueil-manager"
+        },
+        {
+          "title": "Demandes reçues",
+          "icon": "fa-solid fa-bars-staggered",
+          "routerLink": "/manager-demands-list"
+        },
+        {
+          "title": "Gestion des Utilisateurs",
+          "icon": "fa-solid fa-users",
+          "routerLink": "/manager-users"
+        }
+      ]
+    }
+  }  

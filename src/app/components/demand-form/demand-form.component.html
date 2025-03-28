@@ -1,0 +1,35 @@
+<div class="demand-form">
+  <h1 class="new-demand-title text-center mb-4">Nouvelle demande</h1>
+  <form (ngSubmit)="submitDemand()" class="row">
+    <div class="col-md-4 mb-3">
+      <label for="machine-name" class="form-label">Nom du machine</label>
+      <input type="text" placeholder="Exemple : Ordinateur" id="machine-name" [(ngModel)]="demandData.nom_materiel" name="machine-name" class="form-control" required>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <label for="machine-category" class="form-label">Categorie</label>
+      <select id="machine-category" [(ngModel)]="demandData.categorie" name="machine-category" class="form-select" required>
+        <option value="Hardware">Hardware</option>
+        <option value="Software">Software</option>
+      </select>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <label class="form-label">La demande, est-elle urgente ?</label>
+      <div class="toggle-button">
+        <input type="checkbox" [(ngModel)]="demandData.urgent" name="urgent" id="urgent-toggle" class="toggle-checkbox">
+        <label for="urgent-toggle" class="toggle-label">
+          <span class="toggle-text">Non</span>
+          <span class="toggle-icon">Oui</span> <!-- Replace with your preferred icon -->
+        </label>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="demand-description" class="form-label">Description</label>
+      <textarea placeholder="Décrivez le problème que vous avez rencontré" id="demand-description" [(ngModel)]="demandData.description_demande" name="demand-description" class="form-control" required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">Demandez</button>
+  </form>
+</div>

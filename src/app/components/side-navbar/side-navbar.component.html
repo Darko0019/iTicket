@@ -1,0 +1,14 @@
+<div class="sidebar" [class.collapsed]="isCollapsed">
+    <button class="toggle-sidebar-btn" [ngStyle]="{transform: !isCollapsed ? 'rotate(180deg)' : 'rotate(0deg)'}" (click)="toggleSidebar()">
+      <i class="fa fa-bars"></i>
+    </button>
+  
+    <div class="sidebar-links">
+
+      
+      <div class="sidebar-link" *ngFor="let link of sidebarLinks" [routerLink]="link.routerLink" (click)="isCollapsed = true">
+        <span><i class="link-icon {{ link.icon }}"></i></span>
+        <span class="link-title" *ngIf="!isCollapsed">{{ link.title }}</span>
+      </div>
+    </div>
+</div>

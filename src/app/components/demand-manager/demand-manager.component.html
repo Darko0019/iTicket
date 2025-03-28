@@ -1,0 +1,59 @@
+<div class="demand-manager" (click)="navigateToDetails()">
+  <div class="demand-info">
+    <div class="client-profile">
+      <img [src]="defaultProfileImage" class="client-profile-picture" alt="Profile Picture">
+    </div>
+    <div class="demand-details">
+      <span class="demand-message"><span class="sender-name">{{ senderName }}</span> a envoyé une demande</span>
+    </div>
+  </div>
+  <div class="demand-actions">
+    <span class="demand-category">{{ demand.categorie }}</span>
+    <span class="demand-date">
+      <i class="fa-solid fa-clock"></i>
+      {{ demand.date_demande | date : "yyyy-MM-dd" }} • {{ demand.date_demande | date : "HH:mm" }}
+    </span>
+    <button class="actions-button" (click)="toggleActions(); $event.stopPropagation()">
+      <i class="fa-solid fa-ellipsis-vertical"></i>
+    </button>
+
+    <div class="actions-overlay" *ngIf="showActions">
+      <button class="action-item" (click)="assignToTechnician(); $event.stopPropagation()">
+        Assigner
+        <i class="fa-solid fa-ticket"></i>
+      </button>
+      <button class="action-item" (click)="$event.stopPropagation()">
+        Ignorer
+        <i class="fa-solid fa-ban"></i>
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<div
+  class="modal fade"
+  id="assignTechnicianModal"
+  tabindex="-1"
+  aria-hidden="true"
+  [class.show]="showAssignModal"
+  [style.display]="showAssignModal ? 'block' : 'none'"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Assigner à un technicien</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="showAssignModal = false"></button>
+      </div>
+      <div class="modal-body">
+          <div 
+            class="technician"
+            (click)="assignDemandToTechnician(technician.id_technician)" 
+            *ngFor="let technician of technicians"
+          >
+              {{ technician.nom_user }} {{ technician.prenom_user }}
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="client-home">
+    
+    <div class="welcome-container">
+        <!-- <img class="home-bg-image" [src]="HomeBg" alt="Home page background image"> -->
+
+        <div class="welcome-text">
+            <p class="welcoming">Bonjour <span class="nom-user">{{ clientNom }}</span> <span class="prenom-user"> {{ clientPrenom }}</span></p>
+            <p class="functionality-info">Faites une demande maintenant <br>
+            Et suivez son évolution en temps réel !</p>
+            <button (click)="goToAddDemand()">Demandez!</button>
+        </div>
+    </div>
+    <div class="home-content">
+        <div class="title-top">
+            <h2>Demandes récentes</h2>
+            <button class="show-demands-list" routerLink="/client-demands-list">
+                Voir tous
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="demands-list-container">
+            <div class="demands-list">
+                <demand-card *ngFor="let demand of demands" [demand]="demand" [inventory]="inventory"></demand-card>
+            </div>
+            <!-- <div class="fading-overlay"></div> -->
+        </div>
+    </div>
+
+</div>

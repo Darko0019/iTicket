@@ -1,0 +1,24 @@
+<div class="technician-home">
+    <div class="welcome-container">
+        <div class="welcome-text">
+            <p class="welcoming">Bonjour <span class="nom-user">{{ technicianNom }}</span> <span class="prenom-user"> {{ technicianPrenom }}</span></p>
+            <p class="functionality-info">Gérez vos interventions techniques, assurez une résolution rapide des incidents <br> 
+            Et optimisez l'utilisation de vos ressources !</p>
+            <button (click)="goToAssignedDemands()">Consultez!</button>
+        </div>
+    </div>
+    <div class="home-content">
+        <div class="title-top">
+            <h2>Demandes assignées récentes</h2>
+            <button class="show-demands-list" routerLink="/technician-assigned-demands">
+                Voir tous
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="demands-list-container">
+            <div class="demands-list">
+                <demand-card *ngFor="let demand of demands" [demand]="demand" [inventory]="inventory"></demand-card>
+            </div>
+        </div>
+    </div>
+</div>

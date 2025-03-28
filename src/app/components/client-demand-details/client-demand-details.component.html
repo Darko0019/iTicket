@@ -1,0 +1,50 @@
+<div class="demand-details" *ngIf="demand">
+    <div class="details-title-top">
+        <button class="return-home-btn" (click)="goToHome()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <h2>Détailles du demande</h2>
+    </div>
+    
+    <div class="machine-image-container">
+        <img class="machine-image" [src]="CardBg" alt="Machine image">
+    </div>
+    
+    <div class="details-container">
+        <div class="row">
+            <div class="col-4">
+                <p><span class="data-title">Machine name :</span> {{ getMachineName() }}</p>
+            </div>
+            <div class="col-4">
+                <p><span class="data-title">Date :</span> {{ demand.date_demande | date : "yyyy-MM-dd" }} à {{ demand.date_demande | date : "HH:mm" }}</p>
+            </div>
+            <div class="col-4">
+                <p><span class="data-title">Categorie :</span> {{ demand.categorie }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <p><span class="data-title">Status :</span> {{ demand.etat_demande }}</p>
+            </div>
+            <div class="col-4">
+                <p><span class="data-title">Urgent :</span> {{ demand.urgent ? 'Oui' : 'Non' }}</p>
+            </div>
+            <div class="col-4">
+                <p><span class="data-title">Date de résolution :</span> {{ demand.date_resolution ? (demand.date_resolution | date : "yyyy-MM-dd HH:mm") : "La demande est en attente" }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <p><span class="data-title">Nom complet de technicien :</span> La demande est en attente</p>
+            </div>
+            <div class="col-4">
+                <p><span class="data-title">Commentaire de technicien :</span> {{ demand.technicien_commentaire ? demand.technicien_commentaire : "La demande est en attente" }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p><span class="data-title">Description :</span> {{ demand.description_demande }}</p>
+            </div>
+        </div>
+    </div>
+</div>

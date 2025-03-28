@@ -1,0 +1,514 @@
+{
+  "Users": [
+    {
+      "id_user": "clt1",
+      "nom_user": "Alami",
+      "prenom_user": "Mohamed",
+      "email_user": "alamed@gmail.com",
+      "role": "client",
+      "password": "med123",
+      "tel_user": [
+        "0658302120"
+      ],
+      "poste": "Directeur",
+      "departement": "Informatique",
+      "id": "990a",
+      "dateJoined": "2025-03-20T10:00:00Z",
+      "lastLogin": "2025-03-28T11:36:23.850Z",
+      "notifications": []
+    },
+    {
+      "id_user": "tech1",
+      "nom_user": "Jamal",
+      "prenom_user": "Nabil",
+      "email_user": "jam09@gmail.com",
+      "role": "technicien",
+      "password": "jamal123",
+      "tel_user": [
+        "0658857309"
+      ],
+      "disponibilite": true,
+      "specialite": "Hardware",
+      "id": "22a0",
+      "dateJoined": "2025-03-21T14:30:00Z",
+      "lastLogin": "2025-03-25T18:45:00Z",
+      "notifications": []
+    },
+    {
+      "id_user": "gest1",
+      "nom_user": "Hassan",
+      "prenom_user": "Khalid",
+      "email_user": "eg34@gmail.com",
+      "role": "gestionnaire",
+      "password": "hassan123",
+      "tel_user": [
+        "0729481000",
+        "0631328893"
+      ],
+      "id": "098e",
+      "dateJoined": "2025-03-22T08:15:00Z",
+      "lastLogin": "2025-03-27T18:52:15.269Z",
+      "notifications": [
+        {
+          "id": "notification-1742987536504",
+          "senderId": "clt1",
+          "message": "Nouvelle demande reçue par Alami Mohamed",
+          "receivedDate": "2025-03-26T11:12:16.431Z",
+          "read": false
+        },
+        {
+          "id": "notification-1743077157693",
+          "senderId": "clt1",
+          "message": "Nouvelle demande reçue par 'Alami Mohamed'",
+          "receivedDate": "2025-03-27T12:05:57.586Z",
+          "read": false
+        }
+      ]
+    },
+    {
+      "id": "f474",
+      "id_user": "clt2",
+      "nom_user": "Lmardi",
+      "prenom_user": "Housine",
+      "email_user": "hs50@gmail.com",
+      "password": "Hsss333",
+      "role": "client",
+      "dateJoined": "2025-03-23T11:20:00Z",
+      "lastLogin": "2025-03-25T16:55:00Z",
+      "notifications": []
+    },
+    {
+      "id": "0c39",
+      "id_user": "clt3",
+      "nom_user": "Dddd",
+      "prenom_user": "Ffff",
+      "email_user": "df@gmail.com",
+      "username": "",
+      "password": "dddfff",
+      "role": "client",
+      "phoneNumber": "0612567834",
+      "dateJoined": "2025-03-24T09:40:00Z",
+      "lastLogin": "2025-03-25T17:30:00Z",
+      "notifications": []
+    },
+    {
+      "id": "aece",
+      "id_user": "clt4",
+      "nom_user": "aaa",
+      "prenom_user": "aaa",
+      "email_user": "aaa",
+      "password": "aaa",
+      "role": "client",
+      "phoneNumber": "0612567834",
+      "dateJoined": "2025-03-24T15:50:00Z",
+      "lastLogin": "2025-03-25T12:05:00Z",
+      "notifications": []
+    },
+    {
+      "id": "cab3",
+      "id_user": "clt5",
+      "nom_user": "ccc",
+      "prenom_user": "ccc",
+      "email_user": "ccc",
+      "password": "ccc",
+      "role": "client",
+      "phoneNumber": "0612567834",
+      "dateJoined": "2025-03-25T07:00:00Z",
+      "lastLogin": "2025-03-25T14:20:00Z",
+      "notifications": []
+    },
+    {
+      "id": "dc00",
+      "id_user": "clt6",
+      "nom_user": "qqq",
+      "prenom_user": "qqq",
+      "email_user": "qqq",
+      "password": "qqq",
+      "role": "client",
+      "phoneNumber": "0612567834",
+      "dateJoined": "2025-03-25T12:30:00Z",
+      "lastLogin": "2025-03-25T19:40:00Z",
+      "notifications": []
+    },
+    {
+      "id": "7bac",
+      "id_user": "tech2",
+      "nom_user": "Mounir",
+      "prenom_user": "Reda",
+      "email_user": "reda@gmail.com",
+      "password": "reda123",
+      "role": "technicien",
+      "phoneNumber": "0665789398",
+      "domain": "Software",
+      "dateJoined": "2025-03-27T16:43:22.829Z",
+      "lastLogin": "2025-03-27T16:43:32.882Z",
+      "notifications": []
+    }
+  ],
+  "Demandes": [
+    {
+      "id": "f728",
+      "id_demande": "demande-clt1-1742651109116",
+      "id_user": "clt1",
+      "id_materiel": "materiel-1742651109116",
+      "date_demande": "2025-03-22T13:45:09.116Z",
+      "description_demande": "leklweklwke",
+      "categorie": "Software",
+      "etat_demande": "En attente",
+      "urgent": true,
+      "id_technicien": "",
+      "date_resolution": null,
+      "technicien_commentaire": null
+    },
+    {
+      "id": "75f0",
+      "id_demande": "demande-clt1-1742651962003",
+      "id_user": "clt1",
+      "id_materiel": "materiel-1742651962003",
+      "date_demande": "2025-03-22T13:59:22.003Z",
+      "description_demande": "wijiqwej",
+      "categorie": "Hardware",
+      "etat_demande": "En attente",
+      "urgent": true,
+      "id_technicien": "",
+      "date_resolution": null,
+      "technicien_commentaire": null
+    },
+    {
+      "id": "c554",
+      "id_demande": "demande-clt1-1742651975532",
+      "id_user": "clt1",
+      "id_materiel": "materiel-1742651975532",
+      "date_demande": "2025-03-22T13:59:35.532Z",
+      "description_demande": "edwe",
+      "categorie": "Hardware",
+      "etat_demande": "En attente",
+      "urgent": false,
+      "id_technicien": "",
+      "date_resolution": null,
+      "technicien_commentaire": null
+    },
+    {
+      "id": "47cc",
+      "id_demande": "demande-clt2-1742741293148",
+      "id_user": "clt2",
+      "id_materiel": "materiel-1742741293148",
+      "date_demande": "2025-03-23T14:48:13.148Z",
+      "description_demande": "fafa",
+      "categorie": "Software",
+      "etat_demande": "En attente",
+      "urgent": false,
+      "id_technicien": "",
+      "date_resolution": null,
+      "technicien_commentaire": null
+    },
+    {
+      "id": "6cc2",
+      "id_demande": "demande-clt1-1742944424902",
+      "id_user": "clt1",
+      "id_materiel": "materiel-1742944424902",
+      "date_demande": "2025-03-25T23:13:44.902Z",
+      "description_demande": "Zizo",
+      "categorie": "Software",
+      "etat_demande": "En attente",
+      "urgent": true,
+      "id_technicien": "",
+      "date_resolution": null,
+      "technicien_commentaire": null
+    },
+    {
+      "id": "185f",
+      "id_demande": "demande-clt1-1742987536431",
+      "id_user": "clt1",
+      "id_materiel": "materiel-1742987536431",
+      "date_demande": "2025-03-26T11:12:16.431Z",
+      "description_demande": "dwfqwrf",
+      "categorie": "Software",
+      "etat_demande": "En attente",
+      "urgent": true,
+      "id_technicien": "",
+      "date_resolution": null,
+      "technicien_commentaire": null
+    },
+    {
+      "id": "aeaf",
+      "id_demande": "demande-clt1-1743077157586",
+      "id_user": "clt1",
+      "id_materiel": "materiel-1743077157586",
+      "date_demande": "2025-03-27T12:05:57.586Z",
+      "description_demande": "A lot",
+      "categorie": "Software",
+      "etat_demande": "En attente",
+      "urgent": true,
+      "id_technicien": "",
+      "date_resolution": null,
+      "technicien_commentaire": null
+    }
+  ],
+  "Inventaire": [
+    {
+      "id_materiel": "materiel1",
+      "nom_materiel": "Ordinateur",
+      "numSerie": "09871",
+      "etat": "En panne",
+      "id_demande": "demande1",
+      "id": "3585"
+    },
+    {
+      "id_materiel": "materiel2",
+      "nom_materiel": "Imprimante",
+      "numSerie": "09872",
+      "etat": "En panne",
+      "id_demande": "demande2",
+      "id": "4f65"
+    },
+    {
+      "id_materiel": "materiel3",
+      "nom_materiel": "Scanner",
+      "numSerie": "09873",
+      "etat": "En panne",
+      "id_demande": "demande3",
+      "id": "fdf7"
+    },
+    {
+      "id": "045f",
+      "id_materiel": "materiel-1742477429650",
+      "nom_materiel": "Smartphone",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742477429626"
+    },
+    {
+      "id": "f8fd",
+      "id_materiel": "materiel-1742477664268",
+      "nom_materiel": "Smartphone",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742477664246"
+    },
+    {
+      "id": "84f3",
+      "id_materiel": "materiel-1742478916897",
+      "nom_materiel": "Smartphone",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742478916874"
+    },
+    {
+      "id": "f7eb",
+      "id_materiel": "materiel-1742479299112",
+      "nom_materiel": "Smartphone",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742479299112"
+    },
+    {
+      "id": "2e98",
+      "id_materiel": "materiel-1742479313821",
+      "nom_materiel": "Smartphone",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742479313821"
+    },
+    {
+      "id": "0678",
+      "id_materiel": "materiel-1742481950206",
+      "nom_materiel": "Laptop",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742481950206"
+    },
+    {
+      "id": "94eb",
+      "id_materiel": "materiel-1742573599439",
+      "nom_materiel": "PC",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt2-1742573599439"
+    },
+    {
+      "id": "98c3",
+      "id_materiel": "materiel-1742573640709",
+      "nom_materiel": "PC",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt2-1742573640709"
+    },
+    {
+      "id": "207c",
+      "id_materiel": "materiel-1742574118343",
+      "nom_materiel": "TV",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742574118343"
+    },
+    {
+      "id": "c7d6",
+      "id_materiel": "materiel-1742574228066",
+      "nom_materiel": "TV",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742574228066"
+    },
+    {
+      "id": "2f0d",
+      "id_materiel": "materiel-1742574307098",
+      "nom_materiel": "TV",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742574307098"
+    },
+    {
+      "id": "dd5d",
+      "id_materiel": "materiel-1742574351415",
+      "nom_materiel": "TV",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742574351415"
+    },
+    {
+      "id": "51a3",
+      "id_materiel": "materiel-1742574565853",
+      "nom_materiel": "TV",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742574565853"
+    },
+    {
+      "id": "4511",
+      "id_materiel": "materiel-1742597177275",
+      "nom_materiel": "TV",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742597177275"
+    },
+    {
+      "id": "c124",
+      "id_materiel": "materiel-1742597204128",
+      "nom_materiel": "cq",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742597204129"
+    },
+    {
+      "id": "a4bb",
+      "id_materiel": "materiel-1742597218554",
+      "nom_materiel": "cw",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742597218554"
+    },
+    {
+      "id": "0059",
+      "id_materiel": "materiel-1742597281541",
+      "nom_materiel": "ffffffffffffffffff",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742597281541"
+    },
+    {
+      "id": "2359",
+      "id_materiel": "materiel-1742641414222",
+      "nom_materiel": "PC",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742641414222"
+    },
+    {
+      "id": "5fec",
+      "id_materiel": "materiel-1742642030439",
+      "nom_materiel": "cw",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742642030439"
+    },
+    {
+      "id": "1e40",
+      "id_materiel": "materiel-1742650824829",
+      "nom_materiel": "Tele",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742650824829"
+    },
+    {
+      "id": "9a0b",
+      "id_materiel": "materiel-1742651109116",
+      "nom_materiel": "Smartphone",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742651109116"
+    },
+    {
+      "id": "696f",
+      "id_materiel": "materiel-1742651962003",
+      "nom_materiel": "jhdjdjd",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742651962003"
+    },
+    {
+      "id": "fefe",
+      "id_materiel": "materiel-1742651975532",
+      "nom_materiel": "ddd",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742651975532"
+    },
+    {
+      "id": "ccbf",
+      "id_materiel": "materiel-1742652008505",
+      "nom_materiel": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddedw",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742652008505"
+    },
+    {
+      "id": "469a",
+      "id_materiel": "materiel-1742652159021",
+      "nom_materiel": "fevq",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742652159021"
+    },
+    {
+      "id": "2d9f",
+      "id_materiel": "materiel-1742741192956",
+      "nom_materiel": "ffff",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742741192956"
+    },
+    {
+      "id": "d515",
+      "id_materiel": "materiel-1742741293148",
+      "nom_materiel": "Smartphone",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt2-1742741293148"
+    },
+    {
+      "id": "8bd3",
+      "id_materiel": "materiel-1742944424902",
+      "nom_materiel": "PC",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742944424902"
+    },
+    {
+      "id": "be05",
+      "id_materiel": "materiel-1742987536431",
+      "nom_materiel": "Laptop",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1742987536431"
+    },
+    {
+      "id": "40cf",
+      "id_materiel": "materiel-1743077157586",
+      "nom_materiel": "Laptop",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1743077157586"
+    }
+  ]
+}

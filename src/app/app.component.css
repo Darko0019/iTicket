@@ -1,0 +1,9 @@
+.main-content.logged-in {
+    padding-top: var(--header-height);
+    margin-left: var(--side-navbar-width);
+}
+
+.main-content:not(.logged-in) {
+    padding-top: 0;
+    margin-left: 0;
+}

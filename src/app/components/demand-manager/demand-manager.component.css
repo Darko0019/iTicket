@@ -1,0 +1,130 @@
+.demand-manager {
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    border: 3px solid var(--buttons-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.demand-manager:hover {
+    background-color: #eaecf5;
+}
+
+.client-profile {
+    width: calc(fit-content + 10px);
+    height: calc(fit-content + 10px);
+    border-radius: 50%;
+    background-color: white;
+}
+
+.client-profile-picture {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.demand-info, .demand-actions {
+    display: flex;
+    align-items: center;
+}
+
+.demand-info {
+    gap: 30px;
+}
+
+.demand-actions {
+    position: relative;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.demand-actions .actions-button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 20px;
+    color: var(--icons-color);
+}
+
+.demand-actions .actions-button:hover {
+    background-color: rgba(80, 96, 218, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.actions-overlay {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 0;
+    min-width: 120px;
+    padding: 5px 0;
+  }
+  
+  .action-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    padding: 8px 15px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .action-item:hover {
+    background-color: #f0f0f0;
+  }
+
+  .action-item:first-child i {
+    color: var(--icons-color);
+  }
+
+  .action-item:nth-child(2) i {
+    color: #ff4444;
+  }
+
+  .sender-name {
+    font-weight: 500;
+    color: var(--icons-color);
+    margin: 0 2px;
+    text-transform: uppercase;
+  }
+
+  .demand-category {
+    margin-right: 20px;
+    color: var(--icons-color);
+    font-weight: 500;
+  }
+
+  .demand-date {
+    font-size: 15px;
+  }
+
+  .demand-date i {
+    margin-right: 5px;
+    color: var(--icons-color);
+  }
+
+  .modal {
+    height: 500px;
+  }
+
+  .technician {
+    width: 100%;
+    padding: 20px;
+  }

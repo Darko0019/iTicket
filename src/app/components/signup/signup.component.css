@@ -1,0 +1,36 @@
+.signup-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .full-width {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  button {
+    min-width: 120px;
+  }
+
+  .login-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .login-link span {
+    margin-right: 8px;
+  }
+  
+  .spinner {
+    display: inline-block;
+    margin-right: 8px;
+  }

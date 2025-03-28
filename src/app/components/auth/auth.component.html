@@ -1,0 +1,155 @@
+<div class="auth-container">
+    <div class="auth-wrapper" [class.signup-mode]="!isLoginMode">
+      <!-- Login Form -->
+      <form *ngIf="isLoginMode" (ngSubmit)="onLoginSubmit()" class="login-form">
+        <h2>Bienvenue</h2>
+        
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <input 
+            id="loginEmail"
+            type="email"
+            [(ngModel)]="loginEmail"
+            name="loginEmail"
+            required
+            placeholder="Enter your email"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input 
+            id="loginPassword"
+            type="password"
+            [(ngModel)]="loginPassword"
+            name="loginPassword"
+            required
+            placeholder="Enter your password"
+          />
+        </div>
+  
+        <div *ngIf="loginErrorMessage" class="error-message">
+          {{ loginErrorMessage }}
+        </div>
+  
+        <div class="form-actions">
+          <button 
+            type="submit" 
+            [disabled]="isLoading"
+          >
+            {{ isLoading ? 'Connecting...' : 'Se connecter' }}
+          </button>
+        </div>
+  
+        <div class="auth-toggle">
+          <span>Vous n'avez pas un compte ?</span>
+          <button type="button" (click)="toggleAuthMode()">S'inscrire</button>
+        </div>
+      </form>
+  
+      <!-- Signup Form -->
+      <form *ngIf="!isLoginMode" (ngSubmit)="onSignupSubmit()" class="signup-form">
+        <h2>Créer un compte</h2>
+  
+        <div class="form-group">
+          <label for="signupLastName">Nom</label>
+          <input 
+            id="signupLastName"
+            [(ngModel)]="signupLastName" 
+            name="signupLastName" 
+            required 
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="signupFirstName">Prenom</label>
+          <input 
+            id="signupFirstName"
+            [(ngModel)]="signupFirstName" 
+            name="signupFirstName" 
+            required 
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="signupEmail">Email</label>
+          <input 
+            id="signupEmail"
+            type="email" 
+            [(ngModel)]="signupEmail" 
+            name="signupEmail" 
+            required 
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="signupPhoneNumber">Numéro de téléphone</label>
+          <input 
+            id="signupPhoneNumber"
+            type="tel" 
+            [(ngModel)]="signupPhoneNumber" 
+            name="signupPhoneNumber" 
+            required 
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="signupPassword">Mot de passe</label>
+          <input 
+            id="signupPassword"
+            type="password" 
+            [(ngModel)]="signupPassword" 
+            name="signupPassword" 
+            required 
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="signupConfirmPassword">Confirmez le mot de passe</label>
+          <input 
+            id="signupConfirmPassword"
+            type="password" 
+            [(ngModel)]="signupConfirmPassword" 
+            name="signupConfirmPassword" 
+            required 
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="signupRole">Role</label>
+          <select 
+            id="signupRole"
+            [(ngModel)]="signupRole" 
+            name="signupRole" 
+            required
+          >
+            <option value="client">Client</option>
+            <option value="technicien">Technicien</option>
+          </select>
+        </div>
+  
+        <div class="form-group" *ngIf="signupRole === 'technicien'">
+          <label for="signupDomain">Domaine</label>
+          <select 
+            id="signupDomain"
+            [(ngModel)]="signupSelectedDomain" 
+            name="signupDomain" 
+            required
+          >
+            <option *ngFor="let domain of signupDomains" [value]="domain">
+              {{ domain }}
+            </option>
+          </select>
+        </div>
+  
+        <div class="form-actions">
+          <button type="submit">S'inscrire</button>
+        </div>
+  
+        <div class="auth-toggle">
+          <span>Vous avez déjà un compte ?</span>
+          <button type="button" (click)="toggleAuthMode()">Se connecter</button>
+        </div>
+      </form>
+    </div>
+  </div>

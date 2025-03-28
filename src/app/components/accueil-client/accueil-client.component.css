@@ -1,0 +1,123 @@
+.demands-list-container {
+    position: relative;
+    width: 85%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    overflow-x: scroll;
+}
+
+.demands-list-container .fading-overlay {
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+    pointer-events: none;
+}
+
+.demands-list-container::-webkit-scrollbar {
+    display: none;
+}
+
+.demands-list {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.welcome-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.welcome-container .home-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: brightness(0.5) blur(2px);
+}
+
+.welcome-container .welcome-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px 20px;
+    /* color: white; */
+}
+
+.welcome-container p {
+    width: 100%;
+    text-align: center;
+}
+
+.welcome-text .welcoming {
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.welcome-container p:nth-child(2) {
+    font-size: 20px;
+}
+
+.welcome-text button {
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    padding: 10px 40px;
+    background-color: var(--icons-color);
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.title-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    gap: 50%;
+}
+
+.title-top .show-demands-list {
+    border: none;
+    outline: none;
+    height: fit-content;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 5px 15px;
+    transition: all 0.3s;
+    border-radius: 20px;
+}
+
+.title-top .show-demands-list:hover {
+    background-color: rgba(80, 96, 218, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.show-demands-list i {
+    margin-left: 10px;
+}
+
+.add-demand svg{
+    width: 24px;
+    fill: var(--icons-color);
+}

@@ -1,0 +1,129 @@
+.demand-card {
+    border-radius: 20px;
+    width: 370px;
+    max-width: 100%;
+    display: inline-block;
+    transform: scale(0.85);
+}
+
+.demand-card .delete-demand-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #f03123;
+}
+
+.demand-card > .top-demand-card {
+    position: absolute;
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.demand-card > .demand-card-bg {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+}
+
+.demand-card-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.demand-card-machine-name {
+    font-size: 18px;
+    font-weight: 500;
+    width: 220px;
+    height: 60px;
+}
+
+.demand-card-date {
+    font-size: 13px;
+    float: right;
+    width: 120px;
+    height: 20px;
+}
+
+.demand-card-body {
+    padding: 27px 20px;
+}
+
+.demand-card-description {
+    margin-top: 15px;
+}
+
+.demand-card-machine-category {
+    font-weight: 300;
+}
+
+.demand-card-button {
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    height: 40px;
+    width: 200px;
+    float: right;
+    margin-bottom: 30px;
+}
+
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: block;
+    left: -25px;
+  }
+  
+  .dropdown-item {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .options-menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: all 0.3s;
+  }
+
+  .options-menu-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Glassy background on hover */
+    backdrop-filter: blur(5px); /* Add a blur effect behind the button */
+  }
+
+  .card-badges {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .card-badges i {
+    color: #f03123;
+  }

@@ -1,0 +1,19 @@
+<div class="demands-list-container">
+    <div class="demands-list-content">
+        <div class="demands-list-header">
+            <h2>Liste des demandes</h2>
+        </div>
+    
+        <div class="list-wrapper">
+            <div class="demands-list">
+                <div *ngFor="let demand of demands">
+                    <demand-card [demand]="demand" [inventory]="inventory"></demand-card>
+                </div>
+            
+                <div *ngIf="demands.length === 0" class="no-demands-message">
+                    <p>Aucune demande trouvée.</p>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>  

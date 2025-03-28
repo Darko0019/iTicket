@@ -1,0 +1,28 @@
+<div class="card demand-card">
+  <div class="top-demand-card">
+    <div class="card-badges">
+      <span class="badge" [ngClass]="demand.etat_demande === 'En attente' ? 'text-bg-primary' : 'text-bg-secondary'">{{ demand.etat_demande }}</span>
+      <i *ngIf="demand.urgent == true" class="fa-solid fa-circle-exclamation urgent-icon"></i>
+    </div>
+    <div class="dropdown">
+      <button class="options-menu-btn" (click)="toggleDropdown()">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+      </button>
+      
+      <div class="dropdown-menu" *ngIf="isDropdownOpen">
+        <button class="dropdown-item" (click)="editDemand()">Edit</button>
+        <button class="dropdown-item" (click)="deleteDemand()">Delete</button>
+      </div>
+    </div>
+  </div>
+  <img [src]="CardBg" class="card-img-top demand-card-bg" alt="Card background">
+  <div class="card-body demand-card-body">
+    <div class="demand-card-top">
+      <p class="demand-card-machine-name">{{ getMachineName(demand) }}</p>
+      <p class="demand-card-date">{{ demand.date_demande | date : "yyyy-MM-dd" }} • {{ demand.date_demande | date : "HH:mm" }}</p>
+    </div>
+    <p class="demand-card-description">{{ demand.description_demande }}</p>
+    <p class="demand-card-machine-category">{{ demand.categorie}}</p>
+    <button class="demand-card-button" (click)="navigateToDemandDetails(demand.id_demande)">Voir details</button>
+  </div>
+</div>

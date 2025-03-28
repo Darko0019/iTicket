@@ -1,0 +1,24 @@
+<div class="accueil-manager">
+  <div class="welcome-container">
+    <!-- <img class="home-bg-image" [src]="HomeBg" alt="Home page background image"> -->
+
+    <div class="welcome-text">
+        <p class="welcoming">Bonjour <span class="nom-user">{{ managerNom }}</span> <span class="prenom-user"> {{ managerPrenom }}</span></p>
+        <p class="functionality-info">Centralisez la gestion des incidents, suivez le travail de vos techniciens <br> 
+          Et améliorez les performances de votre service technique !</p>
+          <div class="welcome-buttons">
+            <button routerLink="/manager-demands-list">Consulter les demandes</button>
+          </div>
+    </div>
+</div>
+  <div class="demands-list-container">
+    <h2>Dernières demandes</h2>
+    <div class="demands-list">
+      <demand-manager class="demand-manager" *ngFor="let demand of demands" [demand]="demand"></demand-manager>
+    </div>
+    <div routerLink="/manager-demands-list" class="goToDemandList" *ngIf="demands.length > 5">
+      Voir toutes les demandes reçues
+      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </div>
+  </div>
+</div>
