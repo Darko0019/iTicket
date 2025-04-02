@@ -14,7 +14,7 @@
       "departement": "Informatique",
       "id": "990a",
       "dateJoined": "2025-03-20T10:00:00Z",
-      "lastLogin": "2025-03-28T11:36:23.850Z",
+      "lastLogin": "2025-04-02T09:43:19.995Z",
       "notifications": []
     },
     {
@@ -47,7 +47,7 @@
       ],
       "id": "098e",
       "dateJoined": "2025-03-22T08:15:00Z",
-      "lastLogin": "2025-03-27T18:52:15.269Z",
+      "lastLogin": "2025-04-02T09:51:40.141Z",
       "notifications": [
         {
           "id": "notification-1742987536504",
@@ -61,6 +61,20 @@
           "senderId": "clt1",
           "message": "Nouvelle demande reçue par 'Alami Mohamed'",
           "receivedDate": "2025-03-27T12:05:57.586Z",
+          "read": false
+        },
+        {
+          "id": "notification-1743585442544",
+          "senderId": "clt1",
+          "message": "Nouvelle demande reçue par 'Alami Mohamed'",
+          "receivedDate": "2025-04-02T09:17:22.468Z",
+          "read": false
+        },
+        {
+          "id": "notification-1743587450960",
+          "senderId": "clt7",
+          "message": "Nouvelle demande reçue par 'othjman oull7aj'",
+          "receivedDate": "2025-04-02T09:50:50.877Z",
           "read": false
         }
       ]
@@ -142,6 +156,20 @@
       "domain": "Software",
       "dateJoined": "2025-03-27T16:43:22.829Z",
       "lastLogin": "2025-03-27T16:43:32.882Z",
+      "notifications": []
+    },
+    {
+      "id": "e183",
+      "id_user": "clt7",
+      "nom_user": "othjman",
+      "prenom_user": "oull7aj",
+      "email_user": "othman@gmail.com",
+      "password": "oth123",
+      "role": "client",
+      "phoneNumber": "0612345678",
+      "domain": "",
+      "dateJoined": "2025-04-02T09:48:57.944Z",
+      "lastLogin": "2025-04-02T09:49:26.909Z",
       "notifications": []
     }
   ],
@@ -238,6 +266,34 @@
       "date_demande": "2025-03-27T12:05:57.586Z",
       "description_demande": "A lot",
       "categorie": "Software",
+      "etat_demande": "En attente",
+      "urgent": true,
+      "id_technicien": "",
+      "date_resolution": null,
+      "technicien_commentaire": null
+    },
+    {
+      "id": "5d6f",
+      "id_demande": "demande-clt1-1743585442468",
+      "id_user": "clt1",
+      "id_materiel": "materiel-1743585442468",
+      "date_demande": "2025-04-02T09:17:22.468Z",
+      "description_demande": "bdj2bdjk3dj",
+      "categorie": "Software",
+      "etat_demande": "En attente",
+      "urgent": true,
+      "id_technicien": "",
+      "date_resolution": null,
+      "technicien_commentaire": null
+    },
+    {
+      "id": "8ab7",
+      "id_demande": "demande-clt7-1743587450877",
+      "id_user": "clt7",
+      "id_materiel": "materiel-1743587450877",
+      "date_demande": "2025-04-02T09:50:50.877Z",
+      "description_demande": "PSDHGpiasjfp9 u09wru09W",
+      "categorie": "Hardware",
       "etat_demande": "En attente",
       "urgent": true,
       "id_technicien": "",
@@ -509,6 +565,22 @@
       "numSerie": "",
       "etat": "En panne",
       "id_demande": "demande-clt1-1743077157586"
+    },
+    {
+      "id": "ff68",
+      "id_materiel": "materiel-1743585442468",
+      "nom_materiel": "PC",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt1-1743585442468"
+    },
+    {
+      "id": "aa28",
+      "id_materiel": "materiel-1743587450877",
+      "nom_materiel": "Laptop",
+      "numSerie": "",
+      "etat": "En panne",
+      "id_demande": "demande-clt7-1743587450877"
     }
   ]
 }
